@@ -1,0 +1,21 @@
+Go JSON Lexer
+
+A simple, lightweight JSON tokenizer (lexer) written in Go
+
+🚀 features
+    - hand-written lexer: no external generator tools.  built using standard go libraries.
+    - identifies:
+         - objects ({, }) and arrays ([, ])
+         - strings (including support for escaped characters)
+         - numbers (integers, decimals, and scientific notation)
+         - booleans (true, false) and null
+    - validation: basic validation for bad numbers and unterminated strings.
+    - pretty print: includes a helper function to display tokens in a structured table.
+
+the program takes a raw JSON string and breaks it down into a slice of token structs.  each token contains a type and its literal value.
+
+that's it.  not much :)
+
+never use this for production!!!
+
+
