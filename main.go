@@ -1,13 +1,17 @@
 package main
 
-import "log"
+import (
+	"fmt"
+	"log"
+)
 
 func main() {
 	jsonStr, err := Tokenize(`
 {
   "name": "iPhone 6s",
   "price": 649.99,
-  "isAvailable": true
+  "isAvailable": true,
+  "owner": null
 }
 	`)
 
@@ -16,4 +20,13 @@ func main() {
 	}
 
 	printTokens(jsonStr)
+
+	fmt.Println("\n------------------ RESULT ----------------------")
+
+	result, err := Parser(jsonStr)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(result)
 }
