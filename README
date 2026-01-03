@@ -11,6 +11,7 @@ A simple, lightweight JSON tokenizer (lexer) written in Go
          - booleans (true, false) and null
     - validation: basic validation for bad numbers and unterminated strings.
     - pretty print: includes a helper function to display tokens in a structured table.
+    - AST implemented too for type checking :D
 
 the program takes a raw JSON string and breaks it down into a slice of token structs.  each token contains a type and its literal value.
 
